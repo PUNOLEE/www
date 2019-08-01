@@ -1,2 +1,3 @@
 # www
-website
+Seems impossible for me to recreate it with React lol...
+It's unnecessary though.
