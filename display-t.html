@@ -1,0 +1,126 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>PUNO</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		 <!-- Animate -->
+    <link rel="stylesheet" href="assets/css/animate.css">
+		<link rel="stylesheet" href="assets/css/main.css" />
+
+		<link rel="shortcut icon" href="favicon.ico" >
+<link href="https://fonts.googleapis.com/css?family=Press+Start+2P|Special+Elite" rel="stylesheet">
+<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	</head>
+  
+	<body class="landing" style="background-color: black;">
+<div id="loading" class="">
+        <p>loading...</p>
+    </div>
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				
+              
+			<!-- Intro -->
+				<section id="dis" class="wrapper" style="padding-top: 0px;padding-bottom: 0px;" >
+				<div class="display">
+					<div class="display-container">
+				    <div class="display-content" style="    visibility: inherit;
+    opacity: 1;
+    transform: matrix(1, 0, 0, 1, 0, 0);">
+        <div class="display-1">
+            <div class="display-2  animated fadeInLeft">
+                <h2 class="display-h2">Beidong Mountain Temple</h2>
+                <h3 class="display-h3">Devouted</h3>
+                <p class="display-p">Traditional Chinese elements such as water and ink drawings and calligraphy are utilized on this site. It is clear and straightforward for devotees to keep up with important events when navigating this site</p>
+                <a href="web/temple/index.html" class="launch"><span>Launch the site</span></a>
+            </div>
+        </div>
+                     </div>
+            <div class="display-pic" >
+                <div class="d-p">
+                    <img src="pc/t1.png" class="picc" >
+                </div>
+            </div>
+        </div></div>
+
+						
+					
+				</section>
+<section id="">
+<div class="display-mov-container" style="padding-top: 10em">
+<div class="mov">
+    <video id="portfolio-vid" class="vi" loop src="pc/t.mp4" poster="pc/t.jpg" muted playsinline ></video>
+</div>
+    
+</div>    
+</section>
+
+
+
+
+<!-- Three -->
+
+			<!-- Footer -->
+				<footer id="footer">
+					
+					<div class="copyright">
+						&copy; PUNO LEE. All rights reserved.
+					</div>
+				</footer>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrollgress.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+<!-- 			<script src="assets/js/main.js"></script>
+ -->			<script src="assets/js/delaunay.js"></script>
+            <script src="assets/js/TweenMax.min.js"></script>
+            <script>                // triangulation using https://github.com/ironwallaby/delaunay
+$('#portfolio-vid').mouseover(function(){
+    $(this).get(0).play();
+}).mouseout(function(){
+    // $(this).get(0).pause();
+})
+    $(window).load(function() {
+
+        $('#loading').fadeOut();
+        
+
+    });
+//                     window.onload = function(){
+//     setTimeout(function(){
+//     var loader = document.getElementById("loading")[0];
+//     setTimeout(function(){loader.className="loaded"},1000)
+//     },1000)//强制显示loading page 1s
+// }
+            function show_div(x){
+            	var   obj_div1=document.getElementById("fir"); 
+            	var	obj_div2=document.getElementById("sec"); 
+            	if (x==1) {
+            		 obj_div2.style.visibility='visible';   
+            		 obj_div1.style.visibility='hidden';
+            		 // console.log("111");
+
+            	}else if(x==2){
+            		// obj_div.style.visiblity=(obj_div.style.visiblity=='visible')?'hidden':'visible';
+            		obj_div2.style.visibility='hidden';   
+            		 obj_div1.style.visibility='visible';
+            	}else if(x==3){
+            		 obj_div2.style.visibility='visible';   
+            		 obj_div1.style.visibility='visible';
+            	}
+             
+        }
+
+         
+            </script>
+	</body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>PUNO</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		 <!-- Animate -->
+    <link rel="stylesheet" href="assets/css/animate.css">
+		<link rel="stylesheet" href="assets/css/main.css" />
+        <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+
+		<link rel="shortcut icon" href="favicon.ico" >
+<link href="https://fonts.googleapis.com/css?family=Press+Start+2P|Special+Elite" rel="stylesheet">
+<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	</head>
+  
+	<body class="landing">
+
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				
+              
+			<!-- Intro -->
+				
+<section id="" style="    background-image: url(web/pd/images/background.jpg);
+    background-position:center center;
+    background-repeat:no-repeat;
+    background-size:cover;" >
+<div class="">
+                    <div class="display-container">
+                    <div class="display-content" style="    visibility: inherit;
+    opacity: 1;
+    transform: matrix(1, 0, 0, 1, 0, 0);margin-left: 2rem;">
+        <div class="display-1">
+            <div class="display-2 animated fadeInRight">
+                <h2 class="display-h2 " style="color: #3A3A3A">Perfect Budget</h2>
+                <h3 class="display-h3" style="color: #4A4A4A">Futuristic</h3>
+                <p class="display-p" style="color: #656565">A technical platform used for budget management of colleges and universities.</p>
+                <!-- <a href="http://106.15.47.61:8080/perfectBudget/ui-app-pb/src/index.html" class="launch"><span>Launch the site (accountNum: hsd_admin; password: 123)</span></a> -->
+            </div>
+
+        </div>
+                     </div>
+           <!--  <div class="" style="width: 630px"> -->
+                
+            </div>
+        </div>
+<!-- <div class="display-y-container">
+    <div class="display-y-content" style="height: 562px;width: 100%">
+    <div class="yy" style="touch-action: pan-y; user-select: none; width: 2200px;">
+                <div class="yp" style="width: 990px;height: 562px;">
+                    <div class="p">
+                        <img src="pc/p-1.png" class="yppp p3" width="990" height="562" >
+                    </div>
+                </div>
+                 <div class="yp" style="width: 990px;height: 562px;">
+                    <div class="p">
+                        <img src="pc/p-2.png" class="yppp p3" width="990" height="562" >
+                    </div>
+                </div>
+                
+
+
+    </div>
+        
+    </div>
+</div> -->
+    
+</section>
+<div class="x-container" style="padding-top: 2rem">
+<div  style="text-align:center;padding: 2rem 0"><img src="images/icons/online-shop-3.svg" width="100px"></div>
+    <h2 class="display-h2 xman">Abstract</h2>
+    <p class="xman-p">This article through an actual design and implementation of Web application, experienced the entire process of software development, including system analysis, outline design, detailed design, coding, testing, developed a budget system for the colleges and universities can be automatically balanced. The perfect budget system is a technical platform used for  <font style="font-weight: 600;">budget management of colleges and universities</font>. Its working mechanism can quickly and efficiently realize the customer's demand for comprehensive budget management and adapt to the actual situation in which the demand is constantly changing. 
+    Using the perfect budget system, users can use flexible and convenient budget report. The difference between the perfect budget system and other budget systems and their advantages is that they can be  <font style="font-weight: 600;">intelligently and automatically balanced</font> according to the demand budget amount, saving the user's time and accelerating the progress of the project. The front-end part of the system uses the  <font style="font-weight: 600;">AngularJS framework</font>, and the back-end part uses the  <font style="font-weight: 600;">Spring Boot framework</font>, which making the Web application more efficient. During the development of the system, I was mainly responsible for manufacturing web application login, Home pages, import and export budget tables, budget trim algorithm, account management, inventory management, and other modules.
+    
+</p>
+        <h2 class="display-h2 xman">The roles I played and My team</h2>
+
+<img src="images/r4.png" width="100%">
+<div  style="text-align:center;padding: 2rem 0"><img src="images/icons/analytics-1.svg" width="100px"></div>
+
+<h2 class="display-h2 xman">Requirements Analysis</h2>
+<ul class="xman-ul" style="width:100%">
+    <li class="xman-li">Provides a web page to create user's own project, input the project basic information according to the process, associate the sub-unit personnel account in the project, and set the project budget including the self-raised amount and the special amount, and finally select the template rules of the budget. </li>
+    <li class="xman-li">All items can be sorted according to the last edited time order, which can be modified and deleted at any time.</li>
+    <li class="xman-li">New budget items can be added within the project and the range of budget allocations can be set. Once the trim lock is set, the specific or self-raised value cannot be changed. The user can fill in the calculation basis himself, but some calculation basis is already constrained in the template.</li>
+    <li class="xman-li"> After adding items, you can choose to automatically balance or allocate budgets for each subject according to the set trim rules.</li>
+    <li class="xman-li">Displays sub-units information while editing the main unit. Users can manage sub-units: editing, importing, exporting, and deleting. The submission can be saved when the edit is complete, otherwise it is the draft status.</li>
+    <li class="xman-li">Graphs show the proportion of the main-units and sub-units, the proportion of the items, and the proportion of the sub-items.</li>
+</ul>
+<div  style="text-align:center;padding: 2rem 0"><img src="images/icons/user.svg" width="100px"></div>
+
+<h2 class="display-h2 xman">Outline Design</h2>
+<div class="xman-imgs" style="padding:2rem 0 0 0;">
+    <img src="pc/flowd.png" width="60%">
+    <div style="padding-left: 2rem">
+        <h3 class="xman-h3" style="padding: 0">Transaction Flow Diagram</h3>
+        <p class="xman-p" style="padding: 0">The user logs into the perfect budget system. He can use three functions: project management, member account management (if it is an ordinary user, member account management does not display), and inventory management.
+<br>
+         After the user enters project management, he can create projects, edit projects, and search for projects. </p>
+    </div>
+    <!--  If the user selects the project editing function, he can enter the budget item of the project.
+         <br> He can also choose the trim function, and the budget item of the project can be trimmed according to the selected template rules. The chart will show the proportion of the various types of expenses after trimming. -->
+</div>
+    <h3 class="xman-h3" style="padding: 0">System Use Case</h3>
+    <img src="pc/userd.png" width="100%" >
+</div>
+<div  style="text-align:center;padding: 0 0 2rem 0"><img src="images/icons/development-1.svg" width="100px"></div>
+
+<h2 class="display-h2 xman">Detailed Design</h2>
+<img src="images/detailedd.png" width="100%">
+<div class="x-container" style="padding-top: 2rem">
+<div  style="text-align:center;padding: 0 0 2rem 0"><img src="images/icons/balance.svg" width="100px"></div>
+
+<h2 class="display-h2 xman">Algorithm Design</h2>
+        <h3 class="xman-h3" style="padding-bottom: 0">Introduction to Z3 Solver</h3>
+<p class="xman-p">This system uses a solver developed by Microsoft, Z3 Solver, an SMT solver that can be used to check the solvability of logical expressions.The function of the partial Z3 Solver and a java example are shown below. It can check the feasibility of the logic formula to satisfy.</p>
+<div class="xman-imgs"  style="padding: 0;">
+    <img src="images/code2.jpeg" width="70%" style="box-shadow: 0 2px 108px rgba(175,175 ,175 , .66)">
+    <div style="padding-left: 2rem">
+        <table>
+            <thead>
+                <th>Function Name</th>
+                <th>Function Usage</th>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Create a const</td>
+                <td>ctx.mkIntConst</td>
+            </tr>
+            <tr>
+                <td>create a function</td>
+                <td>ctx.mkFuncDecl</td>
+            </tr>
+            <tr>
+                <td>Great than or equal to</td>
+                <td>ctx.mkGe</td>
+            </tr>
+            <tr>
+                <td>Less than or equal to</td>
+                <td>ctx.mkLe</td>
+            </tr>
+            <tr>
+                <td>Create an int</td>
+                <td>ctx.mkInt</td>
+            </tr>
+            <tr>
+                <td>Add</td>
+                <td>ctx.mkAdd</td>
+            </tr>
+            <tr>
+                <td>Subtract</td>
+                <td>ctx.mkSub</td>
+            </tr>
+            
+            </tbody>
+        </table>
+    </div>
+        
+</div>
+
+</div>
+<h3 class="xman-h3" style="padding: 0">Autotrim Algorithm</h3>
+<p class="xman-h3" style="padding:0">Highest cost of labor fee example</p>
+<img src="images/codea.png" width="100%">
+<div class="xman-footer">
+       <a href="display-k.html"  class="button xman-btn" type="submit" style="font-weight: 200;"><i class="fas fa-chevron-left"></i></a>
+       <h2 class="display-h2 " style="color:#000;text-align: center;font-size: 28px;">Thank you for reading!</h2>
+       <a href="display-t.html" class="button xman-btn" type="submit" style="font-weight: 200;"><i class="fas fa-chevron-right"></i></a>
+   </div> 
+			<!-- Main -->
+			
+<!-- Three -->
+
+			<!-- Footer -->
+				<footer id="footer">
+					
+					<div class="copyright">
+						&copy; PUNO LEE. All rights reserved.
+					</div>
+				</footer>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrollgress.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+<!-- 			<script src="assets/js/main.js"></script>
+ -->			<script src="assets/js/delaunay.js"></script>
+            <script src="assets/js/TweenMax.min.js"></script>
+            <script>                // triangulation using https://github.com/ironwallaby/delaunay
+
+//                     window.onload = function(){
+//     setTimeout(function(){
+//     var loader = document.getElementById("loading")[0];
+//     setTimeout(function(){loader.className="loaded"},1000)
+//     },1000)//强制显示loading page 1s
+// }
+            function show_div(x){
+            	var   obj_div1=document.getElementById("fir"); 
+            	var	obj_div2=document.getElementById("sec"); 
+            	if (x==1) {
+            		 obj_div2.style.visibility='visible';   
+            		 obj_div1.style.visibility='hidden';
+            		 // console.log("111");
+
+            	}else if(x==2){
+            		// obj_div.style.visiblity=(obj_div.style.visiblity=='visible')?'hidden':'visible';
+            		obj_div2.style.visibility='hidden';   
+            		 obj_div1.style.visibility='visible';
+            	}else if(x==3){
+            		 obj_div2.style.visibility='visible';   
+            		 obj_div1.style.visibility='visible';
+            	}
+             
+        }
+
+         
+            </script>
+	</body>
+</html>
